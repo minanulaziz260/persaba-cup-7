@@ -1,0 +1,120 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Anton", ui-sans-serif, system-ui, sans-serif;
+  --font-condensed: "Oswald", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  --color-pitch-950: #04070a;
+  --color-pitch-900: #07100c;
+  --color-pitch-800: #0c1a13;
+}
+
+/* Bobot font kustom (Tailwind v4 tidak menyediakan font-600 dll. secara default) */
+@utility font-500 {
+  font-weight: 500;
+}
+@utility font-600 {
+  font-weight: 600;
+}
+@utility font-700 {
+  font-weight: 700;
+}
+@utility font-800 {
+  font-weight: 800;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: #050505;
+  color: #ffffff;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+/* Hide scrollbar untuk horizontal scroll tabs tapi tetap bisa di-scroll */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* ---- Animations ---- */
+@keyframes live-pulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.45;
+    transform: scale(0.85);
+  }
+}
+.animate-live {
+  animation: live-pulse 1.2s ease-in-out infinite;
+}
+
+@keyframes float-up {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-float-up {
+  animation: float-up 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes glow-pulse {
+  0%,
+  100% {
+    opacity: 0.55;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+.animate-glow {
+  animation: glow-pulse 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Aksesibilitas: matikan animasi tapi tetap tampilkan konten */
+@media (prefers-reduced-motion: reduce) {
+  .animate-float-up,
+  .animate-live,
+  .animate-glow {
+    animation: none !important;
+  }
+}
+
+/* Garis lapangan (pitch lines) dekoratif */
+.pitch-lines {
+  background-image: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.04) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 38px 38px;
+}

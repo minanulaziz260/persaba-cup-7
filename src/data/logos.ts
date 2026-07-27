@@ -22,11 +22,11 @@
 // =====================================================================
 
 // Contoh import logo dari file lokal (hapus "//" untuk memakainya):
-// import balongRaya from "../assets/logos/balong-raya.png";
+import balongRaya from "../assets/logos/balong-raya.png";
 // import mitraMuda from "../assets/logos/mitra-muda.png";
 
 export const TEAM_LOGOS: Record<string, string> = {
   // --- Contoh pemetaan ---
-  // "Balong Raya": balongRaya,                   // logo dari file lokal
+  "BALONG RAYA (SIDAMULYA)": balongRaya,
   // "Mitra Muda": "https://contoh.com/mitra.png", // logo dari URL
 };

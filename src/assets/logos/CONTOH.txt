@@ -1,0 +1,18 @@
+FOLDER LOGO TIM
+================
+
+TARUH file logo tim DI SINI (folder ini).
+Nama file cukup mirip dengan nama tim, contoh:
+  - Balong Raya     -> balong-raya.png
+  - Gandasuli FC    -> gandasuli-fc.png
+  - PSIT            -> psit.png
+  - AFK Kalisalak   -> afk-kalisalak.png
+
+Logo akan dipakai OTOMATIS — tidak perlu edit kode lain.
+Tim yang belum punya logo di sini tetap memakai avatar inisial.
+
+Format: .png .jpg .jpeg .webp .svg
+Disarankan gambar kotak / 1:1.
+
+(File CONTOH.txt ini HANYA petunjuk, tidak akan dipakai sebagai logo.
+Bisa dihapus.)

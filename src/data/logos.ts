@@ -1,32 +1,61 @@
 // =====================================================================
-//  ⚙️ LOGO TIM (SETTING LOGO TIAP TIM YANG TANDING)
+//  ⚙️ LOGO TIM — OTOMATIS (TINGGAL UPLOAD FILE LOGO, TANPA EDIT KODE)
 //  -------------------------------------------------------------------
-//  Secara default, tiap tim ditampilkan sebagai AVATAR INISIAL otomatis
-//  (mis. "Balong Raya" -> "BR", "Mitra Muda" -> "MM").
-//  Jika Anda mendaftarkan logo di bawah, tim tersebut akan memakai
-//  logonya sebagai ganti inisial. Tim yang TIDAK didaftarkan tetap
-//  memakai inisial otomatis.
+//  CARA PAKAI:
+//    1. Buka folder:  src/assets/logos/
+//    2. Taruh file logo tim di sana. Selesai — langsung dipakai otomatis!
 //
-//  CARA MENAMBAH LOGO TIM:
+//  Aturan nama file: cukup MIRIP nama tim (huruf besar/kecil & tanda
+//  hubung bebas). Contoh untuk "Balong Raya":
+//        balong-raya.png   |   balong_raya.png   |   BalongRaya.png
 //
-//  A) Dari file lokal (DI-EMBED ke aplikasi — paling disarankan):
-//     1. Buat folder  src/assets/logos/  lalu taruh gambar logo di sana.
-//     2. Import gambar di bawah, lalu daftarkan ke TEAM_LOGOS.
+//  Contoh nama file untuk beberapa tim:
+//        "Balong Raya"     -> balong-raya.png
+//        "Gandasuli FC"    -> gandasuli-fc.png
+//        "PSIT"            -> psit.png
+//        "AFK Kalisalak"   -> afk-kalisalak.png
+//        "Diklat HM"       -> diklat-hm.png
 //
-//  B) Dari URL internet:
-//     - Langsung tulis URL-nya sebagai nilai. (Aplikasi harus online
-//       saat dibuka agar gambar tampil.)
-//
-//  PENTING: Kunci (key) HARUS SAMA PERSIS dengan "name" tim di file
-//  src/data/tournament.ts — termasuk huruf besar/kecil & spasi.
+//  Format didukung: .png .jpg .jpeg .webp .svg
+//  File logo di-EMBED ke aplikasi (tampil walau offline).
+//  Tim tanpa file logo tetap pakai AVATAR INISIAL otomatis (mis. "MM").
 // =====================================================================
 
-// Contoh import logo dari file lokal (hapus "//" untuk memakainya):
-import balongRaya from "../assets/logos/balong-raya.png";
-// import mitraMuda from "../assets/logos/mitra-muda.png";
+import { ROUNDS } from "./tournament";
 
-export const TEAM_LOGOS: Record<string, string> = {
-  // --- Contoh pemetaan ---
-  "BALONG RAYA (SIDAMULYA)": balongRaya,
-  // "Mitra Muda": "https://contoh.com/mitra.png", // logo dari URL
-};
+/** Normalisasi: "Balong Raya" / "balong-raya" -> "balongraya" */
+function slug(name: string): string {
+  return name.toLowerCase().replace(/[^a-z0-9]/g, "");
+}
+
+/** Kumpulkan semua nama tim asli dari jadwal (bukan slot "Menunggu") */
+const realTeamNames = Array.from(
+  new Set(
+    ROUNDS.flatMap((round) =>
+      round.matches.flatMap((m) => [m.home.name, m.away.name]),
+    ),
+  ),
+).filter((name) => name !== "Menunggu Pemenang");
+
+/** Pemetaan slug -> nama tim resmi (mis. "balongraya" -> "Balong Raya") */
+const TEAM_BY_SLUG: Record<string, string> = {};
+for (const name of realTeamNames) {
+  TEAM_BY_SLUG[slug(name)] = name;
+}
+
+/** Baca SEMUA file gambar di folder logos secara otomatis */
+const logoFiles = import.meta.glob(
+  "../assets/logos/*.{png,jpg,jpeg,webp,svg}",
+  { eager: true, import: "default" },
+) as Record<string, string>;
+
+/** Susun peta logo akhir: nama tim -> URL gambar */
+export const TEAM_LOGOS: Record<string, string> = {};
+for (const [path, url] of Object.entries(logoFiles)) {
+  const fileName = path.split("/").pop() ?? path; // "balong-raya.png"
+  const fileSlug = slug(fileName.replace(/\.[^.]+$/, "")); // "balongraya"
+  const teamName = TEAM_BY_SLUG[fileSlug];
+  if (teamName) {
+    TEAM_LOGOS[teamName] = url;
+  }
+}

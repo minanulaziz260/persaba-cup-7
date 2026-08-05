@@ -3,6 +3,7 @@ import Header from "./components/Header";
 import StatBar from "./components/StatBar";
 import RoundTabs from "./components/RoundTabs";
 import MatchCard from "./components/MatchCard";
+import Countdown from "./components/Countdown";
 
 import Footer from "./components/Footer";
 import { BallIcon, SearchIcon, TrophyIcon } from "./components/Icons";
@@ -42,6 +43,7 @@ export default function App() {
   return (
     <div className="min-h-screen bg-pitch-950 pb-10">
       <Header />
+      <Countdown />
       <StatBar rounds={ROUNDS} />
 
       <RoundTabs rounds={ROUNDS} activeId={activeId} onSelect={setActiveId} />

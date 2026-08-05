@@ -44,7 +44,18 @@ export default function Footer() {
               {TOURNAMENT_INFO.system}
             </span>
           </div>
-          <p className="mt-2 max-w-md text-xs text-slate-600">
+
+          <a
+            href="https://maps.app.goo.gl/M1uWFSWXP4gQpDXj8"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-3 inline-flex items-center gap-2 rounded-xl border border-amber-500/20 bg-amber-500/10 px-5 py-2.5 text-sm font-600 text-amber-300 transition-all hover:bg-amber-500/20 hover:text-amber-200 active:scale-95"
+          >
+            <PinIcon className="h-4 w-4" />
+            Live Maps: Lapangan Sipung Jati Rengasbandung
+          </a>
+
+          <p className="mt-4 max-w-md text-xs text-slate-600">
             Jadwal dapat berubah sewaktu-waktu mengikuti ketentuan panitia.
           </p>
           <p className="mt-3 text-[11px] text-slate-600">

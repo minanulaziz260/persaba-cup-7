@@ -3,7 +3,7 @@ import Header from "./components/Header";
 import StatBar from "./components/StatBar";
 import RoundTabs from "./components/RoundTabs";
 import MatchCard from "./components/MatchCard";
-import TopScorers from "./components/TopScorers";
+
 import Footer from "./components/Footer";
 import { BallIcon, SearchIcon, TrophyIcon } from "./components/Icons";
 import { ROUNDS } from "./data/tournament";
@@ -162,8 +162,6 @@ export default function App() {
           </div>
         )}
       </main>
-
-      <TopScorers />
 
       {/* Quick info banner */}
       <div className="mx-auto max-w-5xl px-5">

@@ -120,7 +120,10 @@ const roundOf32: Match[] = [
     venue: VENUE,
     home: { name: "Perseka", origin: "Kedungtukang" },
     away: { name: "Tritama", origin: "Pesantunan" },
-    status: "scheduled",
+    status: "finished",
+    scoreHome: 5,
+    scoreAway: 0,
+    winner: "home",
   },
   {
     id: 4,

@@ -66,7 +66,7 @@ export const TOURNAMENT_INFO = {
   region: "Kec. Jatibarang, Kabupaten Brebes",
   system: "Sistem Gugur (Knockout)",
   totalTeams: 32,
-  dateRange: "31 Juli – 6 September 2026",
+  dateRange: "31 Juli – SELESAI",
 } as const;
 
 /** Waktu kick-off seragam */

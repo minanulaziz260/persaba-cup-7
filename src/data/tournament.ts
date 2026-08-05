@@ -261,8 +261,8 @@ const roundOf16: Match[] = [
     date: "22 Agustus 2026",
     time: KICKOFF,
     venue: VENUE,
-    home: { name: "Mitra Muda", origin: "Slawi" },
-    away: TBD("Pemenang Match 2"),
+    home: TBD("Pemenang Match 1 & 2"),
+    away: TBD("Pemenang Match 1 & 2"),
     status: "scheduled",
   },
   {

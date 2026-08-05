@@ -159,7 +159,10 @@ const roundOf32: Match[] = [
     venue: VENUE,
     home: { name: "Gema FC", origin: "Gumalar" },
     away: { name: "Prasaja", origin: "Cipetung Paguyangan" },
-    status: "scheduled",
+    status: "finished",
+    scoreHome: 4,
+    scoreAway: 1,
+    winner: "home",
   },
   {
     id: 7,

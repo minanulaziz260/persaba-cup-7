@@ -2,6 +2,7 @@ import { useMemo, useState } from "react";
 import Header from "./components/Header";
 import StatBar from "./components/StatBar";
 import RoundTabs from "./components/RoundTabs";
+import Gallery from "./components/Gallery";
 import MatchCard from "./components/MatchCard";
 import Countdown from "./components/Countdown";
 
@@ -164,6 +165,8 @@ export default function App() {
           </div>
         )}
       </main>
+
+      <Gallery />
 
       {/* Quick info banner */}
       <div className="mx-auto max-w-5xl px-5">

@@ -358,8 +358,8 @@ const roundOf16: Match[] = [
 const roundOf8: Match[] = [
   {
     id: 25,
-    day: "Minggu",
-    date: "30 Agustus 2026",
+    day: "",
+    date: "Menunggu info",
     time: KICKOFF,
     venue: VENUE,
     home: TBD("Pemenang 16 Besar"),
@@ -368,8 +368,8 @@ const roundOf8: Match[] = [
   },
   {
     id: 26,
-    day: "Senin",
-    date: "31 Agustus 2026",
+    day: "",
+    date: "Menunggu info",
     time: KICKOFF,
     venue: VENUE,
     home: TBD("Pemenang 16 Besar"),
@@ -378,8 +378,8 @@ const roundOf8: Match[] = [
   },
   {
     id: 27,
-    day: "Selasa",
-    date: "1 September 2026",
+    day: "",
+    date: "Menunggu info",
     time: KICKOFF,
     venue: VENUE,
     home: TBD("Pemenang 16 Besar"),
@@ -388,8 +388,8 @@ const roundOf8: Match[] = [
   },
   {
     id: 28,
-    day: "Rabu",
-    date: "2 September 2026",
+    day: "",
+    date: "Menunggu info",
     time: KICKOFF,
     venue: VENUE,
     home: TBD("Pemenang 16 Besar"),
@@ -404,8 +404,8 @@ const roundOf8: Match[] = [
 const semiFinal: Match[] = [
   {
     id: 29,
-    day: "Kamis",
-    date: "3 September 2026",
+    day: "",
+    date: "Menunggu info",
     time: KICKOFF,
     venue: VENUE,
     home: TBD("Pemenang 8 Besar"),
@@ -414,8 +414,8 @@ const semiFinal: Match[] = [
   },
   {
     id: 30,
-    day: "Jumat",
-    date: "4 September 2026",
+    day: "",
+    date: "Menunggu info",
     time: KICKOFF,
     venue: VENUE,
     home: TBD("Pemenang 8 Besar"),
@@ -430,8 +430,8 @@ const semiFinal: Match[] = [
 const finalRound: Match[] = [
   {
     id: 31,
-    day: "Minggu",
-    date: "6 September 2026",
+    day: "",
+    date: "Menunggu info",
     time: KICKOFF,
     venue: VENUE,
     home: TBD("Pemenang Semi Final"),

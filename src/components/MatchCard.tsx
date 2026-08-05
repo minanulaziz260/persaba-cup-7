@@ -167,7 +167,7 @@ export default function MatchCard({
       <div className="flex flex-wrap items-center gap-x-3 gap-y-1 px-4 pt-3">
         <span className="inline-flex items-center gap-1.5 text-[13px] font-600 text-amber-200">
           <CalendarIcon className="h-3.5 w-3.5 text-amber-400/80" />
-          {match.day}, {match.date}
+          {match.day ? `${match.day}, ` : ""}{match.date}
         </span>
         {match.time && (
           <span className="inline-flex items-center gap-1 text-[12px] text-slate-400">

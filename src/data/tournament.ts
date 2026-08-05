@@ -133,7 +133,10 @@ const roundOf32: Match[] = [
     venue: VENUE,
     home: { name: "Solidaritas FC", origin: "Jatibarang" },
     away: { name: "Dekid FC", origin: "Debong Kidul" },
-    status: "scheduled",
+    status: "finished",
+    scoreHome: 4,
+    scoreAway: 1,
+    winner: "home",
   },
   {
     id: 5,

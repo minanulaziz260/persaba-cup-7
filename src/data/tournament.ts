@@ -43,8 +43,8 @@ export interface Match {
   away: Team;
   status: MatchStatus;
   /** Skor (hanya jika status live / finished) */
-  scoreHome?: number | null;
-  scoreAway?: number | null;
+  scoreHome?: number | string | null;
+  scoreAway?: number | string | null;
   /** Menit berjalan untuk status live, contoh "67'" */
   minute?: string;
   /** Pemenang pertandingan, diisi saat status finished */
@@ -107,7 +107,10 @@ const roundOf32: Match[] = [
     venue: VENUE,
     home: { name: "Sinar Muda", origin: "Klampis" },
     away: { name: "Gandasuli FC", origin: "Gandasuli" },
-    status: "scheduled",
+    status: "finished",
+    scoreHome: "4 (1)",
+    scoreAway: "3 (1)",
+    winner: "home",
   },
   {
     id: 3,

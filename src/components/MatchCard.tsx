@@ -79,7 +79,7 @@ function TeamRow({
   showScore,
 }: {
   team: Team;
-  score?: number | null;
+  score?: number | string | null;
   isWinner?: boolean;
   isLoser?: boolean;
   showScore: boolean;

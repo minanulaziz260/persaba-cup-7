@@ -185,7 +185,7 @@ const roundOf32: Match[] = [
     venue: VENUE,
     home: { name: "PSIT", origin: "Terlangu" },
     away: { name: "Pandansari FC", origin: "Paguyangan" },
-    status: "scheduled",
+    status: "live",
   },
   {
     id: 9,

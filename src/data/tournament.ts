@@ -198,7 +198,10 @@ const roundOf32: Match[] = [
     venue: VENUE,
     home: { name: "URG", origin: "Slawi" },
     away: { name: "Bhima Sena", origin: "Pebatan" },
-    status: "scheduled",
+    status: "finished",
+    scoreHome: "2(3)",
+    scoreAway: "2(4)",
+    winner: "away",
   },
   {
     id: 10,

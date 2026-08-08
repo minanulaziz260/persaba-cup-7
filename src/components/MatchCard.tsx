@@ -107,7 +107,7 @@ function TeamRow({
       {showScore && (
         <div
           className={cn(
-            "w-7 text-center font-display text-2xl leading-none",
+            "min-w-7 text-center font-display text-2xl leading-none",
             team.tbd
               ? "text-slate-600"
               : isWinner

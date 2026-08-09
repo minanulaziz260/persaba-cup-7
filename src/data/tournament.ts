@@ -211,7 +211,9 @@ const roundOf32: Match[] = [
     venue: VENUE,
     home: { name: "Persaba", origin: "Rengasbandung" },
     away: { name: "AFK Kalisalak", origin: "Kalisalak" },
-    status: "scheduled",
+    status: "live",
+    scoreHome: 0,
+    scoreAway: 0,
   },
   {
     id: 11,

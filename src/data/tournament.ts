@@ -212,7 +212,7 @@ const roundOf32: Match[] = [
     home: { name: "Persaba", origin: "Rengasbandung" },
     away: { name: "AFK Kalisalak", origin: "Kalisalak" },
     status: "live",
-    scoreHome: 1,
+    scoreHome: 2,
     scoreAway: 0,
   },
   {

@@ -224,10 +224,10 @@ const roundOf32: Match[] = [
     venue: VENUE,
     home: { name: "Liring Galing", origin: "Rajegwesi" },
     away: { name: "Asri FC", origin: "Bumiayu" },
-    status: "live",
-    scoreHome: 1,
+    status: "finished",
+    scoreHome: 2,
     scoreAway: 1,
-    minute: "45'",
+    winner: "home",
   },
   {
     id: 12,

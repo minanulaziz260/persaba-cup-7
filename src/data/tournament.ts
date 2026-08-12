@@ -252,7 +252,7 @@ const roundOf32: Match[] = [
     away: { name: "Diklat HM", origin: "Kedungbokor" },
     status: "finished",
     scoreHome: 2,
-    scoreAway: 0,
+    scoreAway: 1,
     winner: "home",
   },
   {

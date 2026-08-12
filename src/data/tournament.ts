@@ -250,7 +250,10 @@ const roundOf32: Match[] = [
     venue: VENUE,
     home: { name: "Sindujaya FC", origin: "Kertasinduyasa" },
     away: { name: "Diklat HM", origin: "Kedungbokor" },
-    status: "scheduled",
+    status: "finished",
+    scoreHome: 2,
+    scoreAway: 0,
+    winner: "home",
   },
   {
     id: 14,

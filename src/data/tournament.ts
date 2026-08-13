@@ -263,7 +263,10 @@ const roundOf32: Match[] = [
     venue: VENUE,
     home: { name: "Kebogadung FC", origin: "Kebogadung" },
     away: { name: "Lhumbunk FC", origin: "Randusanga Kulon" },
-    status: "scheduled",
+    status: "finished",
+    scoreHome: 7,
+    scoreAway: 0,
+    winner: "home",
   },
   {
     id: 15,

@@ -289,7 +289,10 @@ const roundOf32: Match[] = [
     venue: VENUE,
     home: { name: "Persekal", origin: "Kalipucang" },
     away: { name: "Pokek", origin: "Rengaspendawa" },
-    status: "scheduled",
+    status: "live",
+    scoreHome: 0,
+    scoreAway: 0,
+    minute: "1'",
   },
 ];
 
